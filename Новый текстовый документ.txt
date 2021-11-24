@@ -1,0 +1,38 @@
+#include <iostream>// РАКОВИЧ АЛЕКСЕЙ. П43021.
+#include <ctime>
+using namespace std;
+int main() {
+	//1. Задан массив A, содержащий 100 целых чисел. Найти сумму элементов этого массива. 
+	const int a = 100;
+	int arr[a];
+	srand(time(0));
+	for (int i = 0; i < a; i++)arr[i] = (rand() % 99- 100);
+	for (int i = 0; i < a; i++)cout << arr[i] << ' ';
+	cout << endl;
+	int sum = 0;
+	for (int i = 0; i < a; i++) {
+		sum = sum + arr[i];
+	}
+	cout << sum << endl;
+	return 0;
+}
+	//2. Задан массив, который содержит 80 целых чисел.Найти сумму положительных элементов массива.
+	srand(time(0));
+	const int a = 80;
+	int arr[a];
+	int sum = 0;
+	srand(time(0));
+	for (int i = 0; i < a; i++)arr[i] = (rand() % 79 - 80);
+	for (int i = 0; i < a; i++)cout << arr[i] << ' ';
+	cout << endl;
+	int sum = 0;
+	for (int i = 0; i < a; ++i) {
+		if (arr[i] > 0) {
+			sum += arr[i];
+		}
+	}
+
+	cout<<"sum = "<<endl;
+
+	return 0;
+}
